@@ -17,6 +17,12 @@ describe("Thermostat", function() {
     expect(thermostat.isPowerSavingModeOn()).toBe(false);
   });
 
+  it('allows you to turn the power saving mode on', function() {
+    thermostat.switchPowerSavingModeOff();
+    thermostat.switchPowerSavingModeOn();
+    expect(thermostat.isPowerSavingModeOn()).toBe(true)
+  })
+
   it("starts at 20 degrees", function() {
     expect(thermostat.getCurrentTemperature()).toEqual(20);
   });
