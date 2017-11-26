@@ -8,6 +8,10 @@ describe("Thermostat", function() {
     thermostat = new Thermostat();
   });
 
+  it('starts with powersavingmode on', function() {
+    expect(thermostat.isPowerSavingModeOn()).toBe(true);
+  });
+
   it("starts at 20 degrees", function() {
     expect(thermostat.getCurrentTemperature()).toEqual(20);
   });
