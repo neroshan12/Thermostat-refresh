@@ -12,6 +12,11 @@ describe("Thermostat", function() {
     expect(thermostat.isPowerSavingModeOn()).toBe(true);
   });
 
+  it('allows you to turn the power saving mode off', function() {
+    thermostat.switchPowerSavingModeOff();
+    expect(thermostat.isPowerSavingModeOn()).toBe(false);
+  });
+
   it("starts at 20 degrees", function() {
     expect(thermostat.getCurrentTemperature()).toEqual(20);
   });
@@ -32,4 +37,6 @@ describe("Thermostat", function() {
     }
     expect(thermostat.getCurrentTemperature()).toEqual(10);
   })
+
+
 });
